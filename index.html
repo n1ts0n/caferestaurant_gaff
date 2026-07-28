@@ -5,14 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
     <title>Gaf Cafe | کافه گاف</title>
 
-    <!-- ===== فونت وزیر ===== -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" />
     <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" />
 
     <style>
-        /* ================================================================
-           CSS VARIABLES
-           ================================================================ */
+
         :root {
             --bg-primary: #f5efe8;
             --bg-secondary: #ffffff;
@@ -60,9 +57,7 @@
             --slider-overlay: rgba(0, 0, 0, 0.7);
         }
 
-        /* ================================================================
-           RESET & BASE - بهینه
-           ================================================================ */
+
         * {
             margin: 0;
             padding: 0;
@@ -97,9 +92,6 @@
             padding: 0 16px;
         }
 
-        /* ================================================================
-           SCROLLBAR
-           ================================================================ */
         ::-webkit-scrollbar {
             width: 6px;
         }
@@ -111,9 +103,7 @@
             border-radius: 10px;
         }
 
-        /* ================================================================
-           ANIMATIONS - سبک‌تر
-           ================================================================ */
+
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -186,7 +176,7 @@
         }
 
         /* ================================================================
-           HEADER - بهینه
+           HEADER
            ================================================================ */
         header {
             background: var(--gradient-header);
@@ -470,9 +460,7 @@
             }
         }
 
-        /* ================================================================
-           HERO - اسلایدر
-           ================================================================ */
+
         .hero-slider {
             margin-top: 65px;
             position: relative;
@@ -591,9 +579,7 @@
             }
         }
 
-        /* ================================================================
-           بخش‌های عمومی
-           ================================================================ */
+
         section {
             padding: 40px 0;
         }
@@ -624,9 +610,7 @@
             font-size: 0.95rem;
         }
 
-        /* ================================================================
-           منوی چند سطحی - بهینه
-           ================================================================ */
+
         .category-level-1 {
             display: flex;
             justify-content: center;
@@ -718,14 +702,13 @@
             }
         }
 
-        /* ================================================================
-           منو - نمایش آیتم‌ها - بهینه
-           ================================================================ */
+
         .menu-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
             gap: 16px;
             animation: fadeIn 0.4s ease;
+            min-height: 100px;
         }
 
         .menu-item {
@@ -859,6 +842,7 @@
             .menu-grid {
                 grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
                 gap: 12px;
+                min-height: 80px;
             }
             .menu-item {
                 padding: 14px 10px 12px;
@@ -895,9 +879,7 @@
             margin-bottom: 10px;
         }
 
-        /* ================================================================
-           دکمه بازگشت
-           ================================================================ */
+
         .back-btn {
             display: none;
             background: var(--bg-card);
@@ -934,9 +916,7 @@
             margin-bottom: 8px;
         }
 
-        /* ================================================================
-           درباره ما - بهینه
-           ================================================================ */
+
         .about-section {
             background: var(--bg-secondary);
             border-radius: 30px;
@@ -1000,9 +980,7 @@
             }
         }
 
-        /* ================================================================
-           تماس با ما - بهینه
-           ================================================================ */
+
         .contact-section {
             background: var(--bg-secondary);
             border-radius: 30px;
@@ -1080,9 +1058,7 @@
             }
         }
 
-        /* ================================================================
-           مودال سبد خرید - بهینه
-           ================================================================ */
+
         .modal-overlay {
             display: none;
             position: fixed;
@@ -1316,12 +1292,10 @@
             animation: fadeIn 0.4s ease;
         }
 
-        /* ================================================================
-           فوتر
-           ================================================================ */
+
         footer {
             text-align: center;
-            padding: 28px 0;
+            padding: 28px 0 20px;
             color: var(--text-light);
             font-size: 0.8rem;
             border-top: 1px solid var(--border-color);
@@ -1332,9 +1306,24 @@
             color: #8B5E3C;
         }
 
-        /* ================================================================
-           دکمه اسکرول به بالا
-           ================================================================ */
+        footer .footer-dev {
+            margin-top: 8px;
+            font-size: 0.7rem;
+            opacity: 0.5;
+            letter-spacing: 1px;
+        }
+
+        footer .footer-dev span {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        @media (max-width: 576px) {
+            footer .footer-dev {
+                font-size: 0.6rem;
+            }
+        }
+
         .scroll-top {
             position: fixed;
             bottom: 20px;
@@ -1377,9 +1366,7 @@
 </head>
 <body>
 
-    <!-- ============================================================= -->
-    <!-- HEADER -->
-    <!-- ============================================================= -->
+
     <header id="header">
         <div class="container header-content">
             <a href="#" class="logo">
@@ -1409,9 +1396,7 @@
         </div>
     </header>
 
-    <!-- ============================================================= -->
-    <!-- HERO SLIDER -->
-    <!-- ============================================================= -->
+
     <section class="hero-slider" id="heroSlider">
         <div class="slider-slide active" style="background: var(--gradient-hero);">
             <div class="overlay">
@@ -1460,9 +1445,7 @@
         </div>
     </section>
 
-    <!-- ============================================================= -->
-    <!-- MENU SECTION -->
-    <!-- ============================================================= -->
+
     <section id="menu">
         <div class="container">
             <h2 class="section-title animate-on-scroll" data-i18n="menu-title">📋 منوی کافه گاف</h2>
@@ -1485,9 +1468,6 @@
         </div>
     </section>
 
-    <!-- ============================================================= -->
-    <!-- ABOUT SECTION -->
-    <!-- ============================================================= -->
     <section id="about">
         <div class="container">
             <div class="about-section animate-on-scroll">
@@ -1509,9 +1489,7 @@
         </div>
     </section>
 
-    <!-- ============================================================= -->
-    <!-- CONTACT SECTION -->
-    <!-- ============================================================= -->
+
     <section id="contact">
         <div class="container">
             <div class="contact-section animate-on-scroll">
@@ -1550,9 +1528,7 @@
         </div>
     </section>
 
-    <!-- ============================================================= -->
-    <!-- CART MODAL -->
-    <!-- ============================================================= -->
+
     <div class="modal-overlay" id="cartModal">
         <div class="modal">
             <button class="modal-close" onclick="closeCart()">✕</button>
@@ -1579,38 +1555,26 @@
         </div>
     </div>
 
-    <!-- ============================================================= -->
-    <!-- SCROLL TO TOP -->
-    <!-- ============================================================= -->
     <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
-    <!-- ============================================================= -->
-    <!-- FOOTER -->
-    <!-- ============================================================= -->
+=========================================================== -->
     <footer>
         <div class="container">
             <p>© ۲۰۲۶ <span class="footer-heart">❤</span> Gaf Cafe | <span data-i18n="footer-rights">تمامی حقوق محفوظ است</span></p>
             <p style="font-size:0.7rem; opacity:0.6;" data-i18n="footer-by">طراحی شده با عشق برای عاشقان قهوه</p>
+            <p class="footer-dev">developed by <span>(nitson)company</span></p>
         </div>
     </footer>
 
-    <!-- ============================================================= -->
-    <!-- JAVASCRIPT - بهینه -->
-    <!-- ============================================================= -->
+=========================================================== -->
     <script>
-        // ================================================================
-        //  🔥 تنظیمات اولیه
-        // ================================================================
 
-        const ENTRY_NAME = 'entry.2129964073';
-        const ENTRY_PHONE = 'entry.526155712';
-        const ENTRY_ITEMS = 'entry.1366309362';
-        const ENTRY_TOTAL = 'entry.317766198';
-        const FORM_URL = 'https://docs.google.com/forms/d/e/1YV_C4y1PCX_V90x9IKVJAXVB9nnsUoORzIeD3s.../viewform';
+        const ENTRY_NAME = 'entry.197281321';
+        const ENTRY_PHONE = 'entry.2131476348';
+        const ENTRY_ITEMS = 'entry.1198326881';
+        const ENTRY_TOTAL = 'entry.1563386538';
+        const FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSd_M3tybFMcLvH7QLfSItpB8QNGo5d226XBFUU89BxGiFxiSg/viewform';
 
-        // ================================================================
-        //  📋 منو (قیمت‌ها به تومان)
-        // ================================================================
 
         const menuData = {
             drinks: {
@@ -1936,10 +1900,6 @@
             }
         };
 
-        // ================================================================
-        //  🌍 ترجمه‌ها (فقط بخش‌های ضروری)
-        // ================================================================
-
         const translations = {
             fa: {
                 'nav-menu': 'منو',
@@ -2019,10 +1979,6 @@
             }
         };
 
-        // ================================================================
-        //  متغیرهای اصلی
-        // ================================================================
-
         let currentLang = 'fa';
         let cart = {};
         let currentLevel = 'main';
@@ -2030,11 +1986,6 @@
         let currentSubCategory = null;
         let selectedTable = null;
         let isDark = false;
-
-        // ================================================================
-        //  🪑 انتخاب میز
-        // ================================================================
-
         function renderTables() {
             const container = document.getElementById('tableSelector');
             if (!container) return;
@@ -2054,11 +2005,6 @@
                 btn.classList.toggle('selected', parseInt(btn.textContent) === number);
             });
         }
-
-        // ================================================================
-        //  🖥️ رندر منو - بهینه
-        // ================================================================
-
         function renderMenu() {
             const grid = document.getElementById('menuGrid');
             const level2 = document.getElementById('categoryLevel2');
@@ -2103,12 +2049,11 @@
                 return;
             }
 
-            // رندر با DocumentFragment برای سرعت بیشتر
             const fragment = document.createDocumentFragment();
             items.forEach((item, index) => {
                 const div = document.createElement('div');
                 div.className = 'menu-item';
-                div.style.animation = `slideInRight 0.4s ease ${Math.min(index * 0.03, 0.5)}s both`;
+                div.style.animation = `slideInRight 0.4s ease ${Math.min(index * 0.02, 0.4)}s both`;
 
                 const name = currentLang === 'fa' ? item.name : item.nameEn;
                 const desc = currentLang === 'fa' ? item.desc : item.descEn;
@@ -2204,7 +2149,7 @@
             items.forEach((item, index) => {
                 const div = document.createElement('div');
                 div.className = 'menu-item';
-                div.style.animation = `slideInRight 0.4s ease ${Math.min(index * 0.03, 0.5)}s both`;
+                div.style.animation = `slideInRight 0.4s ease ${Math.min(index * 0.02, 0.4)}s both`;
 
                 const name = currentLang === 'fa' ? item.name : item.nameEn;
                 const desc = currentLang === 'fa' ? item.desc : item.descEn;
@@ -2231,10 +2176,6 @@
             grid.appendChild(fragment);
             applyTranslations();
         }
-
-        // ================================================================
-        //  🎯 انتخاب دسته‌بندی
-        // ================================================================
 
         function selectCategory(category) {
             currentCategory = category;
@@ -2280,9 +2221,6 @@
             document.getElementById('menu').scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
-        // ================================================================
-        //  🛒 مدیریت سبد خرید
-        // ================================================================
 
         function addToCart(id) {
             if (!cart[id]) cart[id] = 0;
@@ -2336,10 +2274,6 @@
             const total = Object.values(cart).reduce((a, b) => a + b, 0);
             document.getElementById('cartCount').textContent = total;
         }
-
-        // ================================================================
-        //  📋 سبد خرید - مودال
-        // ================================================================
 
         function openCart() {
             document.getElementById('cartModal').classList.add('show');
@@ -2403,10 +2337,6 @@
             }
         }
 
-        // ================================================================
-        //  🔍 پیدا کردن آیتم با ID
-        // ================================================================
-
         function getItemById(id) {
             for (const catKey of Object.keys(menuData)) {
                 const cat = menuData[catKey];
@@ -2417,10 +2347,6 @@
             }
             return null;
         }
-
-        // ================================================================
-        //  📤 ارسال سفارش به گوگل فرم
-        // ================================================================
 
         function submitOrder() {
             const name = document.getElementById('customerName').value.trim();
@@ -2502,11 +2428,6 @@
             btn.disabled = false;
             btn.textContent = currentLang === 'fa' ? '📝 ثبت سفارش' : '📝 Place Order';
         }
-
-        // ================================================================
-        //  🌙 دارک مود / لایت مود
-        // ================================================================
-
         function toggleTheme() {
             isDark = !isDark;
             const html = document.getElementById('htmlRoot');
@@ -2527,10 +2448,6 @@
             document.getElementById('themeToggle').textContent = '☀️';
         }
         document.getElementById('themeToggle').addEventListener('click', toggleTheme);
-
-        // ================================================================
-        //  🌍 تغییر زبان
-        // ================================================================
 
         function toggleLang() {
             currentLang = currentLang === 'fa' ? 'en' : 'fa';
@@ -2569,10 +2486,6 @@
         }
         document.getElementById('langToggle').addEventListener('click', toggleLang);
 
-        // ================================================================
-        //  🕐 ساعت دیجیتال
-        // ================================================================
-
         function updateClock() {
             const now = new Date();
             document.getElementById('headerClock').textContent =
@@ -2580,10 +2493,6 @@
         }
         setInterval(updateClock, 1000);
         updateClock();
-
-        // ================================================================
-        //  🎯 رویدادها - بهینه
-        // ================================================================
 
         document.querySelectorAll('#categoryLevel1 button').forEach(btn => {
             btn.addEventListener('click', function() { selectCategory(this.dataset.category); });
@@ -2595,7 +2504,6 @@
             document.getElementById('scrollTop').classList.toggle('show', window.scrollY > 400);
         }, { passive: true });
 
-        // اسلایدر
         let currentSlide = 0;
         const slides = document.querySelectorAll('.slider-slide');
         const dots = document.querySelectorAll('.slider-dots button');
@@ -2612,7 +2520,6 @@
 
         setInterval(() => { goToSlide((currentSlide + 1) % slides.length); }, 5000);
 
-        // انیمیشن اسکرول
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) entry.target.classList.add('show');
@@ -2629,16 +2536,11 @@
             if (e.target === this) closeCart();
         });
 
-        // ================================================================
-        //  🚀 راه‌اندازی نهایی
-        // ================================================================
-
-        renderMenu();
-        applyTranslations();
-        renderTables();
-
-        console.log('☕ Gaf Cafe - نسخه بهینه راه‌اندازی شد!');
-        console.log('تعداد آیتم‌ها:', document.querySelectorAll('.menu-item').length);
+        setTimeout(() => {
+            renderMenu();
+            applyTranslations();
+            renderTables();
+        }, 100);
     </script>
 
 </body>
