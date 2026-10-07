@@ -1842,326 +1842,223 @@
         const FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSd_M3tybFMcLvH7QLfSItpB8QNGo5d226XBFUU89BxGiFxiSg/viewform';
 
         const menuData = {
-            drinks: {
-                label: 'نوشیدنی‌ها',
-                labelEn: 'Drinks',
+    drinks: {
+        label: 'نوشیدنی‌ها',
+        labelEn: 'Drinks',
+        emoji: '🍹',
+        subcategories: {
+            barGarm: {
+                label: 'بار گرم',
+                labelEn: 'Hot Bar',
+                emoji: '☕',
+                items: [
+                    { id: 1, name: 'اسپرسو', nameEn: 'Espresso', emoji: '☕', price: 110000, desc: 'کلاسیک' },
+                    { id: 2, name: 'آمریکانو', nameEn: 'Americano', emoji: '☕', price: 120000, desc: 'اسپرسو با آب' },
+                    { id: 3, name: 'لاته', nameEn: 'Latte', emoji: '☕', price: 165000, desc: 'با شیر بخار' },
+                    { id: 4, name: 'موکا', nameEn: 'Mocha', emoji: '☕', price: 225000, desc: 'اسپرسو با شکلات' },
+                    { id: 5, name: 'موکا نارگیل', nameEn: 'Coconut Mocha', emoji: '🥥', price: 245000, desc: 'موکا با نارگیل' },
+                    { id: 6, name: 'لاته ماچا', nameEn: 'Latte Matcha', emoji: '🍵', price: 275000, desc: 'با چای ماچا' },
+                    { id: 7, name: 'لاته اسپرولینا', nameEn: 'Latte Sperulina', emoji: '☕', price: 295000, desc: 'با اسپرولینا' },
+                    { id: 8, name: 'چای کرک', nameEn: 'Chai Kerek', emoji: '🫖', price: 345000, desc: 'چای کرک' },
+                    { id: 9, name: 'لاته زعفرانی', nameEn: 'Saffron Latte', emoji: '☕', price: 185000, desc: 'با زعفران' },
+                    { id: 10, name: 'هات چاکلت', nameEn: 'Hot Chocolate', emoji: '🍫', price: 215000, desc: 'شکلات داغ' },
+                    { id: 11, name: 'ماسالا', nameEn: 'Masala', emoji: '🫖', price: 225000, desc: 'چای با ادویه' },
+                    { id: 12, name: 'کاپوچینو', nameEn: 'Cappuccino', emoji: '☕', price: 265000, desc: 'با کف شیر' },
+                    { id: 13, name: 'شیر عسل دارچین', nameEn: 'Honey Cinnamon Milk', emoji: '🥛', price: 175000, desc: 'شیر با عسل و دارچین' },
+                    { id: 14, name: 'نسکافه', nameEn: 'Nescafe', emoji: '☕', price: 195000, desc: 'کلاسیک' },
+                ]
+            },
+            makتیل: {
+                label: 'ماکتیل',
+                labelEn: 'Mocktails',
                 emoji: '🍹',
-                subcategories: {
-                    barGarm: {
-                        label: 'بار گرم',
-                        labelEn: 'Hot Bar',
-                        emoji: '☕',
-                        items: [
-                            { id: 1, name: 'اسپرسو', nameEn: 'Espresso', emoji: '☕', price: 95000,
-                            desc: 'کلاسیک' },
-                            { id: 2, name: 'آمریکانو', nameEn: 'Americano', emoji: '☕', price: 105000,
-                                desc: 'اسپرسو با آب' },
-                            { id: 3, name: 'لاته', nameEn: 'Latte', emoji: '☕', price: 175000,
-                            desc: 'با شیر بخار' },
-                            { id: 4, name: 'موکا', nameEn: 'Mocha', emoji: '☕', price: 205000,
-                            desc: 'اسپرسو با شکلات' },
-                            { id: 5, name: 'موکا نارگیل', nameEn: 'Coconut Mocha', emoji: '🥥', price: 210000,
-                                desc: 'موکا با نارگیل' },
-                            { id: 6, name: 'وایت لوتوس', nameEn: 'White Lotus', emoji: '☕', price: 210000,
-                                desc: 'با شکلات سفید' },
-                            { id: 7, name: 'کاپوچینو', nameEn: 'Cappuccino', emoji: '☕', price: 175000,
-                                desc: 'با کف شیر' },
-                            { id: 8, name: 'نسکافه', nameEn: 'Nescafe', emoji: '☕', price: 175000, desc: 'کلاسیک' },
-                            { id: 9, name: 'ماسالا', nameEn: 'Masala', emoji: '🫖', price: 175000,
-                            desc: 'چای با ادویه' },
-                            { id: 10, name: 'هات چاکلت', nameEn: 'Hot Chocolate', emoji: '🍫', price: 175000,
-                                desc: 'شکلات داغ' },
-                            { id: 11, name: 'هات کرانچ', nameEn: 'Hot Crunch', emoji: '🍫', price: 215000,
-                                desc: 'شکلات با کرانچ' },
-                            { id: 12, name: 'پرشین لاته', nameEn: 'Persian Latte', emoji: '☕', price: 210000,
-                                desc: 'با زعفران' },
-                            { id: 13, name: 'لاته اسپرولینا', nameEn: 'Latte Sperulina', emoji: '☕', price: 245000,
-                                desc: 'با اسپرولینا' },
-                            { id: 14, name: 'لاته ماچا', nameEn: 'Latte Matcha', emoji: '🍵', price: 210000,
-                                desc: 'با چای ماچا' },
-                        ]
-                    },
-                    makتیل: {
-                        label: 'ماکتیل',
-                        labelEn: 'Mocktails',
-                        emoji: '🍹',
-                        items: [
-                            { id: 15, name: 'موهیتو', nameEn: 'Mojito', emoji: '🍹', price: 175000,
-                            desc: 'کلاسیک' },
-                            { id: 16, name: 'رد موهیتو', nameEn: 'Red Mojito', emoji: '🍹', price: 185000,
-                                desc: 'با تمشک' },
-                            { id: 17, name: 'بلک موهیتو', nameEn: 'Black Mojito', emoji: '🍹', price: 185000,
-                                desc: 'با زغال اخته' },
-                            { id: 18, name: 'لیموناد کلاسیک', nameEn: 'Classic Lemonade', emoji: '🍋', price: 145000,
-                                desc: 'لیموناد تازه' },
-                            { id: 19, name: 'پیناکولادا', nameEn: 'Pina Colada', emoji: '🍍', price: 245000,
-                                desc: 'با آناناس و نارگیل' },
-                            { id: 20, name: 'رزبری', nameEn: 'Raspberry', emoji: '🫐', price: 215000,
-                            desc: 'با طعم تمشک' },
-                            { id: 21, name: 'کهربا', nameEn: 'Amber', emoji: '🍹', price: 265000,
-                            desc: 'نوشیدنی ویژه' },
-                        ]
-                    },
-                    barSardGhave: {
-                        label: 'بار سرد بر پایه قهوه',
-                        labelEn: 'Cold Coffee Bar',
-                        emoji: '🧊',
-                        items: [
-                            { id: 22, name: 'آیس آمریکانو', nameEn: 'Iced Americano', emoji: '🧊', price: 105000,
-                                desc: 'اسپرسو سرد' },
-                            { id: 23, name: 'آیس لاته', nameEn: 'Iced Latte', emoji: '🧊', price: 185000,
-                                desc: 'لاته سرد' },
-                            { id: 24, name: 'آیس لاته کارامل', nameEn: 'Iced Caramel Latte', emoji: '🧊', price: 195000,
-                                desc: 'با کارامل' },
-                            { id: 25, name: 'آیس موکا', nameEn: 'Iced Mocha', emoji: '🧊', price: 205000,
-                                desc: 'موکا سرد' },
-                            { id: 26, name: 'آیس موکا نارگیل', nameEn: 'Iced Coconut Mocha', emoji: '🧊', price: 215000,
-                                desc: 'با نارگیل' },
-                            { id: 27, name: 'آیس موکا ماچا', nameEn: 'Iced Mocha Matcha', emoji: '🧊', price: 265000,
-                                desc: 'با ماچا' },
-                            { id: 28, name: 'آیس کافی ماچا', nameEn: 'Iced Coffee Matcha', emoji: '🧊', price: 230000,
-                                desc: 'قهوه با ماچا' },
-                            { id: 29, name: 'آیس لاته اسپرولینا', nameEn: 'Iced Latte Sperulina', emoji: '🧊',
-                                price: 245000, desc: 'با اسپرولینا' },
-                            { id: 30, name: 'آیس لاته کوکوماچا', nameEn: 'Iced Coco Matcha', emoji: '🧊', price: 230000,
-                                desc: 'نارگیل و ماچا' },
-                        ]
-                    },
-                    damnoosh: {
-                        label: 'دم‌نوش‌ها',
-                        labelEn: 'Herbal Teas',
-                        emoji: '🍵',
-                        items: [
-                            { id: 31, name: 'چای کلاسیک', nameEn: 'Classic Tea', emoji: '🫖', price: 95000,
-                                desc: 'چای سیاه' },
-                            { id: 32, name: 'چای ترش', nameEn: 'Sour Tea', emoji: '🍵', price: 85000,
-                            desc: 'با طعم ترش' },
-                            { id: 33, name: 'آرامش', nameEn: 'Relax', emoji: '🍵', price: 90000,
-                            desc: 'آرامش‌بخش' },
-                            { id: 34, name: 'لیدی', nameEn: 'Lady', emoji: '🍵', price: 120000, desc: 'مخصوص' },
-                            { id: 35, name: 'به لیمو', nameEn: 'Lemon Balm', emoji: '🍋', price: 85000,
-                            desc: 'به لیمو' },
-                            { id: 36, name: 'چای سبز', nameEn: 'Green Tea', emoji: '🍵', price: 85000,
-                            desc: 'چای سبز' },
-                            { id: 37, name: 'دمنوش گاف', nameEn: 'Gaf Herbal', emoji: '🍵', price: 130000,
-                                desc: 'ویژه کافه' },
-                        ]
-                    },
-                    shakes: {
-                        label: 'شیک‌ها',
-                        labelEn: 'Shakes',
-                        emoji: '🥤',
-                        items: [
-                            { id: 38, name: 'شیک نوتلا بیسکوییت', nameEn: 'Nutella Biscuit Shake', emoji: '🍫',
-                                price: 245000, desc: 'نوتلا و بیسکوییت' },
-                            { id: 39, name: 'شیک لوتوس', nameEn: 'Lotus Shake', emoji: '🍪', price: 215000,
-                                desc: 'بیسکوییت لوتوس' },
-                            { id: 40, name: 'شیک بادام زمینی', nameEn: 'Peanut Butter Shake', emoji: '🥜', price: 195000,
-                                desc: 'کره بادام زمینی' },
-                            { id: 41, name: 'شیک شکلات', nameEn: 'Chocolate Shake', emoji: '🍫', price: 195000,
-                                desc: 'شکلاتی' },
-                            { id: 42, name: 'شیک قهوه', nameEn: 'Coffee Shake', emoji: '☕', price: 220000,
-                                desc: 'با قهوه' },
-                            { id: 43, name: 'شیک میوه‌ای', nameEn: 'Fruit Shake', emoji: '🍓', price: 195000,
-                                desc: 'با میوه تازه' },
-                        ]
-                    },
-                    vitamines: {
-                        label: 'ویتامین‌ها',
-                        labelEn: 'Vitamins',
-                        emoji: '🥛',
-                        items: [
-                            { id: 44, name: 'شیر موز', nameEn: 'Banana Milk', emoji: '🍌', price: 185000,
-                                desc: 'با موز تازه' },
-                            { id: 45, name: 'شیر خرما', nameEn: 'Date Milk', emoji: '🌴', price: 190000,
-                                desc: 'با خرما' },
-                            { id: 46, name: 'شیر انبه', nameEn: 'Mango Milk', emoji: '🥭', price: 195000,
-                                desc: 'با انبه' },
-                            { id: 47, name: 'شیر نارگیل', nameEn: 'Coconut Milk', emoji: '🥥', price: 175000,
-                                desc: 'شیر نارگیل' },
-                        ]
-                    }
-                }
+                items: [
+                    { id: 15, name: 'موهیتو', nameEn: 'Mojito', emoji: '🍹', price: 210000, desc: 'کلاسیک' },
+                    { id: 16, name: 'رد موهیتو', nameEn: 'Red Mojito', emoji: '🍹', price: 225000, desc: 'با تمشک' },
+                    { id: 17, name: 'لیموناد کلاسیک', nameEn: 'Classic Lemonade', emoji: '🍋', price: 255000, desc: 'لیموناد تازه' },
+                    { id: 18, name: 'پیناکولادا', nameEn: 'Pina Colada', emoji: '🍍', price: 275000, desc: 'با آناناس و نارگیل' },
+                    { id: 19, name: 'رزبری', nameEn: 'Raspberry', emoji: '🫐', price: 245000, desc: 'با طعم تمشک' },
+                    { id: 20, name: 'کهربا', nameEn: 'Amber', emoji: '🍹', price: 295000, desc: 'نوشیدنی ویژه' },
+                ]
             },
-            foods: {
-                label: 'غذاها',
-                labelEn: 'Foods',
+            barSardGhave: {
+                label: 'بار سرد بر پایه قهوه',
+                labelEn: 'Cold Coffee Bar',
+                emoji: '🧊',
+                items: [
+                    { id: 21, name: 'آیس آمریکانو', nameEn: 'Iced Americano', emoji: '🧊', price: 120000, desc: 'اسپرسو سرد' },
+                    { id: 22, name: 'آیس لاته', nameEn: 'Iced Latte', emoji: '🧊', price: 195000, desc: 'لاته سرد' },
+                    { id: 23, name: 'آیس لاته کارامل', nameEn: 'Iced Caramel Latte', emoji: '🧊', price: 225000, desc: 'با کارامل' },
+                    { id: 24, name: 'آیس موکا', nameEn: 'Iced Mocha', emoji: '🧊', price: 245000, desc: 'موکا سرد' },
+                    { id: 25, name: 'آیس موکا ماچا', nameEn: 'Iced Mocha Matcha', emoji: '🧊', price: 295000, desc: 'با ماچا' },
+                    { id: 26, name: 'آیس کافی ماچا', nameEn: 'Iced Coffee Matcha', emoji: '🧊', price: 345000, desc: 'قهوه با ماچا' },
+                    { id: 27, name: 'آیس لاته اسپرولینا', nameEn: 'Iced Latte Sperulina', emoji: '🧊', price: 305000, desc: 'با اسپرولینا' },
+                    { id: 28, name: 'آیس لاته کوکوماچا', nameEn: 'Iced Coco Matcha', emoji: '🧊', price: 345000, desc: 'نارگیل و ماچا' },
+                ]
+            },
+            damnoosh: {
+                label: 'دم‌نوش‌ها',
+                labelEn: 'Herbal Teas',
+                emoji: '🍵',
+                items: [
+                    { id: 29, name: 'چای کلاسیک', nameEn: 'Classic Tea', emoji: '🫖', price: 110000, desc: 'چای سیاه' },
+                    { id: 30, name: 'آرامش', nameEn: 'Relax', emoji: '🍵', price: 120000, desc: 'آرامش‌بخش' },
+                    { id: 31, name: 'لیدی', nameEn: 'Lady', emoji: '🍵', price: 120000, desc: 'مخصوص' },
+                    { id: 32, name: 'به لیمو', nameEn: 'Lemon Balm', emoji: '🍋', price: 120000, desc: 'به لیمو' },
+                    { id: 33, name: 'دمنوش گاف', nameEn: 'Gaf Herbal', emoji: '🍵', price: 120000, desc: 'ویژه کافه' },
+                ]
+            },
+            shakes: {
+                label: 'شیک‌ها',
+                labelEn: 'Shakes',
+                emoji: '🥤',
+                items: [
+                    { id: 34, name: 'شیک شکلات', nameEn: 'Chocolate Shake', emoji: '🍫', price: 295000, desc: 'شکلاتی' },
+                    { id: 35, name: 'شیک میوه‌ای', nameEn: 'Fruit Shake', emoji: '🍓', price: 295000, desc: 'با میوه تازه' },
+                    { id: 36, name: 'شیک نوتلا بیسکوییت', nameEn: 'Nutella Biscuit Shake', emoji: '🍫', price: 355000, desc: 'نوتلا و بیسکوییت' },
+                    { id: 37, name: 'شیک بادام زمینی', nameEn: 'Peanut Butter Shake', emoji: '🥜', price: 315000, desc: 'کره بادام زمینی' },
+                    { id: 38, name: 'شیک کرم اورئو', nameEn: 'Oreo Cream Shake', emoji: '🍪', price: 315000, desc: 'با کرم اورئو' },
+                    { id: 39, name: 'شیک قهوه', nameEn: 'Coffee Shake', emoji: '☕', price: 355000, desc: 'با قهوه' },
+                    { id: 40, name: 'شیک لوتوس', nameEn: 'Lotus Shake', emoji: '🍪', price: 310000, desc: 'بیسکوییت لوتوس' },
+                ]
+            },
+            vitamines: {
+                label: 'ویتامین‌ها',
+                labelEn: 'Vitamins',
+                emoji: '🥛',
+                items: [
+                    { id: 41, name: 'شیر موز', nameEn: 'Banana Milk', emoji: '🍌', price: 205000, desc: 'با موز تازه' },
+                    { id: 42, name: 'شیر خرما', nameEn: 'Date Milk', emoji: '🌴', price: 265000, desc: 'با خرما' },
+                    { id: 43, name: 'شیر انبه', nameEn: 'Mango Milk', emoji: '🥭', price: 225000, desc: 'با انبه' },
+                    { id: 44, name: 'شیر نارگیل', nameEn: 'Coconut Milk', emoji: '🥥', price: 245000, desc: 'شیر نارگیل' },
+                    { id: 45, name: 'شیر عسل', nameEn: 'Honey Milk', emoji: '🍯', price: 195000, desc: 'شیر با عسل' },
+                ]
+            }
+        }
+    },
+    foods: {
+        label: 'غذاها',
+        labelEn: 'Foods',
+        emoji: '🍕',
+        subcategories: {
+            pizza: {
+                label: 'پیتزاها',
+                labelEn: 'Pizzas',
                 emoji: '🍕',
-                subcategories: {
-                    pizza: {
-                        label: 'پیتزاها',
-                        labelEn: 'Pizzas',
-                        emoji: '🍕',
-                        items: [
-                            { id: 48, name: 'گاف اسپشیال (تک)', nameEn: 'Gaf Special (S)', emoji: '🍕', price: 610000,
-                                desc: 'ویژه کافه' },
-                            { id: 49, name: 'گاف اسپشیال (دو)', nameEn: 'Gaf Special (D)', emoji: '🍕', price: 970000,
-                                desc: 'ویژه کافه' },
-                            { id: 50, name: 'بلونز (تک)', nameEn: 'Blones (S)', emoji: '🍕', price: 345000,
-                            desc: 'پیتزا بلونز' },
-                            { id: 51, name: 'بلونز (دو)', nameEn: 'Blones (D)', emoji: '🍕', price: 630000,
-                            desc: 'پیتزا بلونز' },
-                            { id: 52, name: 'پپرونی (تک)', nameEn: 'Pepperoni (S)', emoji: '🍕', price: 420000,
-                                desc: 'پیتزا پپرونی' },
-                            { id: 53, name: 'پپرونی (دو)', nameEn: 'Pepperoni (D)', emoji: '🍕', price: 690000,
-                                desc: 'پیتزا پپرونی' },
-                            { id: 54, name: 'رست پیف (تک)', nameEn: 'Roast Beef (S)', emoji: '🥩', price: 590000,
-                                desc: 'با گوشت رست' },
-                            { id: 55, name: 'رست پیف (دو)', nameEn: 'Roast Beef (D)', emoji: '🥩', price: 870000,
-                                desc: 'با گوشت رست' },
-                            { id: 56, name: 'گریل چیکن (تک)', nameEn: 'Grill Chicken (S)', emoji: '🍗', price: 365000,
-                                desc: 'با مرغ گریل' },
-                            { id: 57, name: 'گریل چیکن (دو)', nameEn: 'Grill Chicken (D)', emoji: '🍗', price: 670000,
-                                desc: 'با مرغ گریل' },
-                            { id: 58, name: 'توسکانا (تک)', nameEn: 'Toscana (S)', emoji: '🍕', price: 340000,
-                                desc: 'پیتزا توسکانا' },
-                            { id: 59, name: 'توسکانا (دو)', nameEn: 'Toscana (D)', emoji: '🍕', price: 570000,
-                                desc: 'پیتزا توسکانا' },
-                            { id: 60, name: 'وجترین (تک)', nameEn: 'Veggie (S)', emoji: '🥗', price: 310000,
-                                desc: 'پیتزا گیاهی' },
-                            { id: 61, name: 'وجترین (دو)', nameEn: 'Veggie (D)', emoji: '🥗', price: 590000,
-                                desc: 'پیتزا گیاهی' },
-                        ]
-                    },
-                    prefood: {
-                        label: 'پیش غذا',
-                        labelEn: 'Appetizers',
-                        emoji: '🧀',
-                        items: [
-                            { id: 62, name: 'نان سیر', nameEn: 'Garlic Bread', emoji: '🥖', price: 185000,
-                                desc: 'نان سیر' },
-                            { id: 63, name: 'سیب‌زمینی سرخ شده', nameEn: 'French Fries', emoji: '🍟', price: 220000,
-                                desc: 'سیب‌زمینی ترد' },
-                            { id: 64, name: 'سیب‌زمینی با پنیر', nameEn: 'Cheese Fries', emoji: '🧀', price: 260000,
-                                desc: 'با پنیر' },
-                            { id: 65, name: 'سیب‌زمینی با مرغ گریل و پنیر', nameEn: 'Chicken Cheese Fries', emoji: '🍗',
-                                price: 345000, desc: 'با مرغ و پنیر' },
-                            { id: 66, name: 'سیب‌زمینی گاف', nameEn: 'Gaf Fries', emoji: '🍟', price: 375000,
-                                desc: 'ویژه' },
-                        ]
-                    },
-                    topping: {
-                        label: 'تاپینگ اضافه',
-                        labelEn: 'Extra Toppings',
-                        emoji: '🧄',
-                        items: [
-                            { id: 67, name: 'شینسل مرغ', nameEn: 'Chicken Schnitzel', emoji: '🍗', price: 0,
-                                desc: 'شینسل مرغ' },
-                            { id: 68, name: 'قارچ', nameEn: 'Mushroom', emoji: '🍄', price: 0, desc: 'قارچ تازه' },
-                            { id: 69, name: 'پنیر', nameEn: 'Cheese', emoji: '🧀', price: 0, desc: 'پنیر اضافه' },
-                            { id: 70, name: 'سفیده تخم‌مرغ', nameEn: 'Egg White', emoji: '🥚', price: 0,
-                                desc: 'سفیده تخم‌مرغ' },
-                            { id: 71, name: 'نان اضافه', nameEn: 'Extra Bread', emoji: '🍞', price: 0,
-                                desc: 'نان اضافه' },
-                            { id: 72, name: 'سیب‌زمینی (۱۰۰گرم)', nameEn: 'Fries (100g)', emoji: '🍟', price: 150000,
-                                desc: '۱۰۰ گرم' },
-                        ]
-                    },
-                    burger: {
-                        label: 'برگر و ساندویچ',
-                        labelEn: 'Burgers & Sandwiches',
-                        emoji: '🍔',
-                        items: [
-                            { id: 73, name: 'چیز برگر', nameEn: 'Cheese Burger', emoji: '🍔', price: 430000,
-                                desc: 'با پنیر' },
-                            { id: 74, name: 'ماشروم برگر', nameEn: 'Mushroom Burger', emoji: '🍔', price: 480000,
-                                desc: 'با قارچ' },
-                            { id: 75, name: 'فرنچ برگر', nameEn: 'French Burger', emoji: '🍔', price: 560000,
-                                desc: 'فرانسوی' },
-                            { id: 76, name: 'چیکن برگر', nameEn: 'Chicken Burger', emoji: '🍔', price: 420000,
-                                desc: 'با مرغ' },
-                            { id: 77, name: 'کلاسیک برگر', nameEn: 'Classic Burger', emoji: '🍔', price: 390000,
-                                desc: 'کلاسیک' },
-                            { id: 78, name: 'دابل برگر', nameEn: 'Double Burger', emoji: '🍔', price: 870000,
-                                desc: 'دوگوشتی' },
-                            { id: 79, name: 'زغالی برگر', nameEn: 'Charcoal Burger', emoji: '🍔', price: 350000,
-                                desc: 'زغالی' },
-                            { id: 80, name: 'هات داگ با قارچ و پنیر', nameEn: 'Hot Dog Mushroom Cheese', emoji: '🌭',
-                                price: 470000, desc: 'با قارچ و پنیر' },
-                            { id: 81, name: 'ساندویچ رست پیف', nameEn: 'Roast Beef Sandwich', emoji: '🥩', price: 566000,
-                                desc: 'با گوشت رست' },
-                            { id: 82, name: 'برگر ویژه گاف', nameEn: 'Gaf Special Burger', emoji: '🍔', price: 470000,
-                                desc: 'ویژه' },
-                        ]
-                    },
-                    healthy: {
-                        label: 'رژیمی',
-                        labelEn: 'Healthy',
-                        emoji: '🥗',
-                        items: [
-                            { id: 83, name: 'بشقاب رژیمی پروکالری', nameEn: 'Pro Kalari Plate', emoji: '🥗',
-                                price: 720000, desc: 'رژیمی' },
-                            { id: 84, name: 'بشقاب گاف', nameEn: 'Gaf Plate', emoji: '🥗', price: 830000,
-                                desc: 'ویژه' },
-                            { id: 85, name: 'ماکارونی', nameEn: 'Macaroni', emoji: '🍝', price: 190000,
-                            desc: 'ماکارونی' },
-                            { id: 86, name: 'ماکارونی با مرغ', nameEn: 'Chicken Macaroni', emoji: '🍝', price: 395000,
-                                desc: 'با مرغ' },
-                            { id: 87, name: 'نودل مرغ', nameEn: 'Chicken Noodle', emoji: '🍜', price: 0,
-                                desc: 'با مرغ' },
-                            { id: 88, name: 'نودل گوشت', nameEn: 'Beef Noodle', emoji: '🍜', price: 0,
-                                desc: 'با گوشت' },
-                            { id: 89, name: 'نودل سبزیجات', nameEn: 'Veggie Noodle', emoji: '🍜', price: 0,
-                                desc: 'سبزیجات' },
-                        ]
-                    },
-                    salad: {
-                        label: 'سالاد',
-                        labelEn: 'Salads',
-                        emoji: '🥗',
-                        items: [
-                            { id: 90, name: 'سزار با مرغ گریل', nameEn: 'Caesar with Grill Chicken', emoji: '🥗',
-                                price: 530000, desc: 'با مرغ گریل' },
-                            { id: 91, name: 'سزار با فیله سوخاری', nameEn: 'Caesar with Crispy Fillet', emoji: '🥗',
-                                price: 570000, desc: 'با فیله سوخاری' },
-                            { id: 92, name: 'سالاد فصل', nameEn: 'Seasonal Salad', emoji: '🥗', price: 180000,
-                                desc: 'با سبزیجات فصل' },
-                        ]
-                    },
-                    pasta: {
-                        label: 'پاستا',
-                        labelEn: 'Pasta',
-                        emoji: '🍝',
-                        items: [
-                            { id: 93, name: 'چیکن آلفردو', nameEn: 'Chicken Alfredo', emoji: '🍝', price: 480000,
-                                desc: 'با مرغ و آلفردو' },
-                            { id: 94, name: 'بیف آلفردو', nameEn: 'Beef Alfredo', emoji: '🍝', price: 580000,
-                                desc: 'با گوشت و آلفردو' },
-                            { id: 95, name: 'چیکن استراگانوف', nameEn: 'Chicken Stroganoff', emoji: '🍝', price: 450000,
-                                desc: 'با مرغ و استراگانوف' },
-                            { id: 96, name: 'بیف استراگانوف', nameEn: 'Beef Stroganoff', emoji: '🍝', price: 620000,
-                                desc: 'با گوشت و استراگانوف' },
-                        ]
-                    }
-                }
+                items: [
+                    { id: 46, name: 'چیکن پستو', nameEn: 'Chicken Pesto', emoji: '🍕', price: 450000, desc: 'پیتزا چیکن پستو' },
+                    { id: 47, name: 'چیکن آلفردو', nameEn: 'Chicken Alfredo', emoji: '🍕', price: 495000, desc: 'پیتزا چیکن آلفردو' },
+                    { id: 48, name: 'چیکن باربیکیو', nameEn: 'Chicken BBQ', emoji: '🍕', price: 480000, desc: 'پیتزا چیکن باربیکیو' },
+                    { id: 49, name: 'گوشت و قارچ', nameEn: 'Beef & Mushroom', emoji: '🍕', price: 570000, desc: 'پیتزا گوشت و قارچ' },
+                    { id: 50, name: 'رست بیف', nameEn: 'Roast Beef', emoji: '🥩', price: 740000, desc: 'پیتزا رست بیف' },
+                    { id: 51, name: 'پپرونی', nameEn: 'Pepperoni', emoji: '🍕', price: 550000, desc: 'پیتزا پپرونی' },
+                    { id: 52, name: 'توسکانا', nameEn: 'Toscana', emoji: '🍕', price: 450000, desc: 'پیتزا توسکانا' },
+                ]
             },
-            desserts: {
+            prefood: {
+                label: 'پیش غذا',
+                labelEn: 'Appetizers',
+                emoji: '🧀',
+                items: [
+                    { id: 53, name: 'سیب زمینی سرخ شده', nameEn: 'French Fries', emoji: '🍟', price: 170000, desc: 'سیب‌زمینی ترد' },
+                    { id: 54, name: 'سیب زمینی ماشدوم', nameEn: 'Mashed Potato Fries', emoji: '🥔', price: 330000, desc: 'با سس ماشدوم' },
+                    { id: 55, name: 'سیب چیز چیکن', nameEn: 'Chicken Cheese Fries', emoji: '🍗', price: 670000, desc: 'با مرغ و پنیر' },
+                    { id: 56, name: 'سیب چیز بیف', nameEn: 'Beef Cheese Fries', emoji: '🥩', price: 730000, desc: 'با گوشت و پنیر' },
+                    { id: 57, name: 'سیب قایقی', nameEn: 'Boat Fries', emoji: '🍟', price: 210000, desc: 'سیب قایقی' },
+                    { id: 58, name: 'نودل مذغ', nameEn: 'Noodle Mذغ', emoji: '🍜', price: 480000, desc: 'نودل مذغ' },
+                    { id: 59, name: 'نودل سبزیجات', nameEn: 'Veggie Noodle', emoji: '🍜', price: 270000, desc: 'سبزیجات' },
+                    { id: 60, name: 'نان سیر', nameEn: 'Garlic Bread', emoji: '🥖', price: 330000, desc: 'نان سیر' },
+                ]
+            },
+            topping: {
+                label: 'افزودنی‌ها',
+                labelEn: 'Extra Toppings',
+                emoji: '🧄',
+                items: [
+                    { id: 61, name: 'فیله مرغ ۱۰۰ گرمی', nameEn: 'Chicken Fillet 100g', emoji: '🍗', price: 195000, desc: '۱۰۰ گرم' },
+                    { id: 62, name: 'ماکارونی', nameEn: 'Macaroni', emoji: '🍝', price: 240000, desc: 'ماکارونی' },
+                    { id: 63, name: 'گته', nameEn: 'Gatteh', emoji: '🧀', price: 360000, desc: 'گته' },
+                    { id: 64, name: 'سس سزار', nameEn: 'Caesar Sauce', emoji: '🥫', price: 150000, desc: 'سس سزار' },
+                    { id: 65, name: 'سس پینکی', nameEn: 'Pinky Sauce', emoji: '🥫', price: 150000, desc: 'سس پینکی' },
+                ]
+            },
+            burger: {
+                label: 'برگر و ساندویچ',
+                labelEn: 'Burgers & Sandwiches',
+                emoji: '🍔',
+                items: [
+                    { id: 66, name: 'کلاسیک برگر', nameEn: 'Classic Burger', emoji: '🍔', price: 580000, desc: 'کلاسیک' },
+                    { id: 67, name: 'چیز برگر', nameEn: 'Cheese Burger', emoji: '🍔', price: 630000, desc: 'با پنیر' },
+                    { id: 68, name: 'ماشروم برگر', nameEn: 'Mushroom Burger', emoji: '🍔', price: 680000, desc: 'با قارچ' },
+                    { id: 69, name: 'چیکن برگر', nameEn: 'Chicken Burger', emoji: '🍔', price: 450000, desc: 'با مرغ' },
+                ]
+            },
+            healthy: {
+                label: 'رژیمی',
+                labelEn: 'Healthy',
+                emoji: '🥗',
+                items: [
+                    { id: 70, name: 'ماکارونی با مرغ', nameEn: 'Chicken Macaroni', emoji: '🍝', price: 420000, desc: 'با مرغ' },
+                    { id: 71, name: 'ماکارونی با گوشت', nameEn: 'Beef Macaroni', emoji: '🍝', price: 480000, desc: 'با گوشت' },
+                ]
+            },
+            salad: {
+                label: 'سالاد',
+                labelEn: 'Salads',
+                emoji: '🥗',
+                items: [
+                    { id: 72, name: 'سزار با فیله مرغ', nameEn: 'Caesar with Chicken Fillet', emoji: '🥗', price: 450000, desc: 'با فیله مرغ' },
+                    { id: 73, name: 'سالاد فصل', nameEn: 'Seasonal Salad', emoji: '🥗', price: 220000, desc: 'با سبزیجات فصل' },
+                    { id: 74, name: 'بشقاب سبز', nameEn: 'Green Plate', emoji: '🥗', price: 320000, desc: 'سبزیجات' },
+                    { id: 75, name: 'بشقاب چیکن استیک', nameEn: 'Chicken Steak Plate', emoji: '🍗', price: 420000, desc: 'با مرغ' },
+                ]
+            },
+            pasta: {
+                label: 'پاستا',
+                labelEn: 'Pasta',
+                emoji: '🍝',
+                items: [
+                    { id: 76, name: 'چیکن آلفردو', nameEn: 'Chicken Alfredo', emoji: '🍝', price: 580000, desc: 'با مرغ و آلفردو' },
+                    { id: 77, name: 'بیف آلفردو', nameEn: 'Beef Alfredo', emoji: '🍝', price: 780000, desc: 'با گوشت و آلفردو' },
+                    { id: 78, name: 'چیکن پستو', nameEn: 'Chicken Pesto', emoji: '🍝', price: 450000, desc: 'با مرغ و پستو' },
+                    { id: 79, name: 'مزالانی مذغ', nameEn: 'Mozzarella Mذغ', emoji: '🍝', price: 750000, desc: 'مزالانی مذغ' },
+                    { id: 80, name: 'مزالانی گوشت', nameEn: 'Beef Mozzarella', emoji: '🍝', price: 820000, desc: 'مزالانی گوشت' },
+                ]
+            },
+            mainDish: {
+                label: 'غذاهای پرسی',
+                labelEn: 'Main Dishes',
+                emoji: '🍽️',
+                items: [
+                    { id: 81, name: 'کته با مرغ گریل', nameEn: 'Rice with Grilled Chicken', emoji: '🍗', price: 530000, desc: 'کته با مرغ گریل' },
+                    { id: 82, name: 'کته با برگر', nameEn: 'Rice with Burger', emoji: '🍔', price: 710000, desc: 'کته با برگر' },
+                    { id: 83, name: 'ماکارونی با مرغ گریل', nameEn: 'Macaroni with Grilled Chicken', emoji: '🍝', price: 480000, desc: 'ماکارونی با مرغ گریل' },
+                    { id: 84, name: 'ماکارونی با برگر', nameEn: 'Macaroni with Burger', emoji: '🍝', price: 570000, desc: 'ماکارونی با برگر' },
+                ]
+            }
+        }
+    },
+    desserts: {
+        label: 'دسرها',
+        labelEn: 'Desserts',
+        emoji: '🍰',
+        subcategories: {
+            allDesserts: {
                 label: 'دسرها',
                 labelEn: 'Desserts',
                 emoji: '🍰',
-                subcategories: {
-                    allDesserts: {
-                        label: 'دسرها',
-                        labelEn: 'Desserts',
-                        emoji: '🍰',
-                        items: [
-                            { id: 97, name: 'کیک شکلاتی', nameEn: 'Chocolate Cake', emoji: '🍰', price: 185000,
-                                desc: 'شکلاتی' },
-                            { id: 98, name: 'کیک بستنی', nameEn: 'Ice Cream Cake', emoji: '🍰', price: 270000,
-                                desc: 'با بستنی' },
-                            { id: 99, name: 'کروسان', nameEn: 'Croissant', emoji: '🥐', price: 210000,
-                            desc: 'تازه' },
-                            { id: 100, name: 'بستنی اسکوپی', nameEn: 'Scoop Ice Cream', emoji: '🍦', price: 185000,
-                                desc: 'اسکوپی' },
-                            { id: 101, name: 'تیرامیسو', nameEn: 'Tiramisu', emoji: '🍫', price: 185000,
-                                desc: 'ایتالیایی' },
-                            { id: 102, name: 'سن سباستین', nameEn: 'San Sebastian', emoji: '🍰', price: 245000,
-                                desc: 'سن سباستین' },
-                        ]
-                    }
-                }
+                items: [
+                    { id: 85, name: 'کیک شکلاتی', nameEn: 'Chocolate Cake', emoji: '🍰', price: 185000, desc: 'شکلاتی' },
+                    { id: 86, name: 'کیک بستنی', nameEn: 'Ice Cream Cake', emoji: '🍰', price: 275000, desc: 'با بستنی' },
+                    { id: 87, name: 'کروسان', nameEn: 'Croissant', emoji: '🥐', price: 195000, desc: 'تازه' },
+                    { id: 88, name: 'تیرامیسو', nameEn: 'Tiramisu', emoji: '🍫', price: 195000, desc: 'ایتالیایی' },
+                    { id: 89, name: 'بستنی اسکوپی', nameEn: 'Scoop Ice Cream', emoji: '🍦', price: 85000, desc: 'اسکوپی' },
+                    { id: 90, name: 'افوگاتو', nameEn: 'Affogato', emoji: '☕', price: 185000, desc: 'افوگاتو' },
+                ]
             }
-        };
+        }
+    }
+};
 
         const translations = {
             fa: {
